@@ -5,7 +5,7 @@
 Alfonso VÃ¡squez Cortes
 
 @DeenyAH
-
+Deeny Esperanza Aguilar Hernández
 
 @DovahChief
 
@@ -17,7 +17,7 @@ Jorge Eduardo Ocampo Lagunas
 Luis Enrique Guzman Luciano
 
 @JJavierRamirez
-
+Jesús Javier Ramírez Martínez
 
 @kozmoz3
 
@@ -32,6 +32,7 @@ Liliana Maria Trejo Valle
 
 
 @Myrmany
+Myrna Martinez
 
 
 @neodevelop
@@ -47,5 +48,8 @@ Roberto Macias Hernandez
 Paredes Navarro Edgar Martin
 
 @SvHector
+Por Aqui estoy yo
+Hector Andres Suarez Vazquez
 
-
+@Albertojhs
+JosÃ© Alberto Hernandez SÃ¡nchez
