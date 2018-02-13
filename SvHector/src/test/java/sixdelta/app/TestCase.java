@@ -1,4 +1,4 @@
-package com.sixdelta.app;
+package sixdelta.app;
 
 import org.junit.*;
 import static org.junit.Assert.*;
