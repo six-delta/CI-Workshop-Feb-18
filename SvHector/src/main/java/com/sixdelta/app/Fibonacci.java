@@ -1,4 +1,4 @@
-package sixdelta.app;
+package com.sixdelta.app;
 
 public class Fibonacci {
 
@@ -23,7 +23,7 @@ public int getTheSumOfEvenNumbersUntil(int n){
 	int[] sequence = getSequenceUntil(n);
 	int accum = 0;
 	for(int i = 0; i < sequence.length; i++){
-		if(sequence[i]%2==0)
+		if(sequence[i] % 2 == 0)
 			accum += sequence[i];
 	}
 	return accum;
