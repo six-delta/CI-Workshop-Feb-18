@@ -9,9 +9,8 @@ public class StringCalculator {
 		if (!isSingleNumber(numbers)) {
 			String[] numbersToSum = numbers.split(",");
 			if (numbers.indexOf("\n") != -1)
-				return sumaNumeros(numbers.replace("\n", ",").split(","));
-
-			return sumaNumeros(numbersToSum);
+				return sumNumbersInStringArray(numbers.replace("\n", ",").split(","));
+			return sumNumbersInStringArray(numbersToSum);
 		}
 		return Integer.parseInt(numbers);
 	}
@@ -28,16 +27,13 @@ public class StringCalculator {
 		return number.split(",").length > 1;
 	}
 
-	private int sumaNumeros(String[] numeros) {
+	private int sumNumbersInStringArray(String[] numbersToBeInSum) {
 		int sumOfNumbersResult = 0;
-
-		int[] sumOfNumbers = new int[numeros.length];
-		for (int i = 0; i < numeros.length; i++)
-			sumOfNumbers[i] = convertToInt(numeros[i]);
-
+		int[] sumOfNumbers = new int[numbersToBeInSum.length];
+		for (int i = 0; i < numbersToBeInSum.length; i++)
+			sumOfNumbers[i] = convertToInt(numbersToBeInSum[i]);
 		for (int i : sumOfNumbers)
 			sumOfNumbersResult += i;
-
 		return sumOfNumbersResult;
 	}
 
