@@ -12,7 +12,10 @@ public class Fibonacci {
   }
 
   public int[] getSequenceUntil(int n){
-    int[] sequence = {1,2,3,4,5};
+    int[] sequence = new int[n];
+    for(int i = 0; i < n; i ++){
+      sequence[i] = getForPosition(i+1);
+    }
     return sequence;
   }
 
