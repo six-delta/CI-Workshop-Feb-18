@@ -12,6 +12,21 @@ import com.sixDelta.six_delta.Fibonacci;
 public class SixDeltaApplicationTests {
 
 	@Test
-	public void prueba() {
+	public void simple() {
+		assertEquals(1,1);
+
+	}
+
+
+	@Test
+	public void fibonacciDeUnNumeroDado(){
+		Fibonacci fibo = new Fibonacci();
+		assertEquals(3524578,fibo.calculaPara(32));
+	}
+
+	@Test
+	public void sumaDeNumeros(){
+		Fibonacci fibo = new Fibonacci();
+		assertEquals(4613732,fibo.calculaSumaDeNNumeros(32));
 	}
 }
