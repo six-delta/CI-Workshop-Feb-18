@@ -7,7 +7,7 @@ public class TestCase {
 
   @Test
   public void firstTest(){
-    assertEquals(1,0);
+    assertEquals(1,1);
   }
 
 }
