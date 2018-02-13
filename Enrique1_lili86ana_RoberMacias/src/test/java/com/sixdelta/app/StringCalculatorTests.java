@@ -3,6 +3,8 @@ package com.sixdelta.app;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
+import org.junit.Ignore;
+
 public class StringCalculatorTests {
 	
 	@Test
@@ -50,5 +52,20 @@ public class StringCalculatorTests {
 		res = stringCalculator.add("5,6,7,8,9");
 		assertEquals(35, res);
 	}
+	
+	@Test
+	@Ignore
+	public void testMoreNumbersWishInTheString() {
+		StringCalculator stringCalculator = new StringCalculator();
+		int res = stringCalculator.add("1\n2\n3");
+		assertEquals(6, res);
+		res = stringCalculator.add("2\n3\n4");
+		assertEquals(9, res);
+		res = stringCalculator.add("4\n5\n6");
+		assertEquals(15, res);
+		res = stringCalculator.add("5\n6\n7\n8\n9");
+		assertEquals(35, res);
+	}
+
 
 }
