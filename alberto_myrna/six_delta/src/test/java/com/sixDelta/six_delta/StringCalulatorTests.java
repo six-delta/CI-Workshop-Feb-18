@@ -37,4 +37,16 @@ public class StringCalulatorTests {
 		assertEquals(11, res);
 	}
 
+
+	@Test
+	public void testManyNumbersInTheString() {
+		StringCalculator stringCalculator = new StringCalculator();
+		int res = stringCalculator.add("1,2,1,2,1,2");
+		assertEquals(9, res);
+		res = stringCalculator.add("2,3,4,5,3");
+		assertEquals(17, res);
+		res = stringCalculator.add("3,4,10,12,10,100");
+		assertEquals(139, res);
+	}
+
 }
