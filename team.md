@@ -2,7 +2,7 @@
 
 
 @AlfonsoVACO
-
+Alfonso Vásquez Cortes
 
 @DeenyAH
 
@@ -44,7 +44,7 @@ Luis Enrique Guzman Luciano
 Roberto Macias Hernandez
 
 @souhain
-
+Paredes Navarro Edgar Martin
 
 @SvHector
 
