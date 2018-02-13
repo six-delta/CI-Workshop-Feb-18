@@ -13,16 +13,19 @@ public class Fibonacci {
 
   public int[] getSequenceUntil(int n){
     int[] sequence = new int[n];
-    for(int i = 0; i < n; i ++)
-		sequence[i] = getForPosition(i+1);
+    for(int i = 0; i < n; i ++){
+      sequence[i] = getForPosition(i+1);
+    }
     return sequence;
   }
 
   public int getTheSumOfEvenNumbersUntil(int n){
     int[] sequence = getSequenceUntil(n);
     int accum = 0;
-    for(int i = 0; i < sequence.length; i++)
-      if(sequence[i] % 2 == 0) accum += sequence[i];
+    for(int i = 0; i < sequence.length; i++){
+      if(sequence[i] % 2 == 0)
+        accum += sequence[i];
+    }
     return accum;
   }
 }
