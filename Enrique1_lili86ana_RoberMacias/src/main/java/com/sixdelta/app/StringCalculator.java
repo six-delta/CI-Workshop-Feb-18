@@ -25,4 +25,6 @@ public class StringCalculator {
 		}
 		return sumNum;
 	}
+	
+	
 }
