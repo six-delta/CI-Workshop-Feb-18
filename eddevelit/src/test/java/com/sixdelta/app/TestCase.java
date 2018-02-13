@@ -25,6 +25,7 @@ public class TestCase {
     assertEquals(n,89);
   }
 
+
   @Test
   public void testFibonnaccSequence(){
     Fibonacci fibonacci = new Fibonacci();
@@ -38,7 +39,8 @@ public class TestCase {
     Fibonacci fibonacci = new Fibonacci();
     int n = fibonacci.getTheSumOfEvenNumbersUntil(10);
     assertEquals(n,44);
-    System.out.println(fibonacci.getTheSumOfEvenNumbersUntil(34));
+    System.out.println(fibonacci.getTheSumOfEvenNumbersUntil(4000000));
   }
+
 
 }
