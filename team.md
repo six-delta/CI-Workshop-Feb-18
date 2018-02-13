@@ -2,7 +2,7 @@
 
 
 @AlfonsoVACO
-
+Alfonso VÃ¡squez Cortes
 
 @DeenyAH
 
@@ -11,7 +11,7 @@
 
 
 @eddevelit
-
+Jorge Eduardo Ocampo Lagunas
 
 @hollowbk201
 Luis Enrique Guzman Luciano
@@ -23,7 +23,7 @@ Jesús Javier Ramírez Martínez
 
 
 @lili86ana
-
+Liliana Maria Trejo Valle
 
 @LuisSas
 
@@ -44,7 +44,7 @@ Jesús Javier Ramírez Martínez
 
 
 @souhain
-
+Paredes Navarro Edgar Martin
 
 @SvHector
 
