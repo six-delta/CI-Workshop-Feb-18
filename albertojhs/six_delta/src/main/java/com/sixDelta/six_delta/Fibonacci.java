@@ -18,4 +18,19 @@ public class Fibonacci{
         	return -1; 
     	}
 	}
+
+
+    public long calculaSumaDeNNumeros(int n){
+            long valor_fibonacci=0;
+            long suma = 0;
+            Fibonacci fibo = new Fibonacci();
+            while(n>=0){
+                valor_fibonacci = fibo.calculaPara(n);
+                if(valor_fibonacci%2==0){
+                    suma = suma + valor_fibonacci;
+                }
+                n--;
+            }
+            return suma;
+        }
 }
