@@ -2,7 +2,7 @@
 
 
 @AlfonsoVACO
-
+Alfonso Vásquez Cortes
 
 @DeenyAH
 
@@ -11,7 +11,7 @@
 
 
 @eddevelit
-
+Jorge Eduardo Ocampo Lagunas
 
 @hollowbk201
 Luis Enrique Guzman Luciano
@@ -23,7 +23,7 @@ Luis Enrique Guzman Luciano
 
 
 @lili86ana
-
+Liliana Maria Trejo Valle
 
 @LuisSas
 
@@ -44,7 +44,7 @@ Luis Enrique Guzman Luciano
 
 
 @souhain
-
+Paredes Navarro Edgar Martin
 
 @SvHector
 Por Aqui estoy yo
