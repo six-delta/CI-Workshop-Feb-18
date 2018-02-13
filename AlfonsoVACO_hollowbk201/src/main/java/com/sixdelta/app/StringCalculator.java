@@ -6,7 +6,7 @@ public class StringCalculator {
 		if (numbers.isEmpty())
 			return 0;
 		
-		if(isSingleNumber(numbers)) {
+		if(!isSingleNumber(numbers)) {
 			String[] numeros_a_sumar = numbers.split(",");
 			return Integer.sum(convertToInt(numeros_a_sumar[0]), convertToInt(numeros_a_sumar[1]));
 		}
@@ -21,7 +21,7 @@ public class StringCalculator {
 	}
 	
 	private boolean isSingleNumber(String number) {
-		return isMultipleNumber(number);
+		return !isMultipleNumber(number);
 	}
 	
 	private boolean isMultipleNumber(String number) {
