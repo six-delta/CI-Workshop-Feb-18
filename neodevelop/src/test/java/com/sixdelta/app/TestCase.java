@@ -39,7 +39,7 @@ public class TestCase {
     Fibonacci fibonacci = new Fibonacci();
     int n = fibonacci.getTheSumOfEvenNumbersUntil(10);
     assertEquals(n,44);
-    System.out.println(fibonacci.getTheSumOfEvenNumbersUntil(4000000));
+    System.out.println(fibonacci.getTheSumOfEvenNumbersUntil(34));
   }
 */
 
