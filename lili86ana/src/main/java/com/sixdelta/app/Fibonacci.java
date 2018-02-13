@@ -1,31 +1,31 @@
-import java.util.*;
-/**
- * Serie de Fibonacci en Java
- * Programa que imprima los N primeros números de la serie de Fibonacci. 
- * El primer número de la serie es 1, el segundo número es 1 y cada uno de los 
- * siguientes es la suma de los dos anteriores.
- * 1, 1, 2, 3, 5, 8, 13,  ....... , N
- * @author Enrique
- */
-public class Fibonacci{
-    public static void Fibonacci(String[] args){
-        Scanner sc = new Scanner(System.in);
-        int numero,fibo1,fibo2,i;
-        do{
-            System.out.print("Introduce numero mayor que 1: ");
-            numero = sc.nextInt();
-        }while(numero<=1);
-        System.out.println("Los " + numero + " primeros términos de la serie de Fibonacci son:"); 
+package com.sixdelta.app;
 
-        fibo1=1;
-        fibo2=1; 
+public class Fibonacci { 
+	public static void main (String[]aegs) {
+		int num= 1,n2,cantidad;
+		int n1=num-1; System.out.print("\nNumero 1:"+num);
+		for (cantidad=1; cantidad<35; cantidad++) {
+			n2=num+n1; System.out.println("\nNumero 1:"+(cantidad)+":"+n2);
+			n1=num; num=n2;
+		}
+	}
+	
 
-        System.out.print(fibo1 + " ");
-        for(i=2;i<=numero;i++){
-             System.out.print(fibo2 + " ");
-             fibo2 = fibo1 + fibo2;
-             fibo1 = fibo2 - fibo1;
-        }
-        System.out.println();
-    }
+	public int getForPosition(int i) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+
+	public int[] getSequenceUntil(int i) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+	public int getTheSumOfEvenNumbersUntil(int i) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
 }
