@@ -21,7 +21,7 @@ public class SixDeltaApplicationTests {
 	@Test
 	public void pruebaFibonacciDeUnNumeroDado(){
 		Fibonacci fibo = new Fibonacci();
-		assertEquals(8,fibo.calculaPara(5));
+		assertEquals(89,fibo.calculaPara(10));
 	}
 
 }
