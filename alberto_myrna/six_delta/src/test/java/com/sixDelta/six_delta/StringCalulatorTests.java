@@ -53,7 +53,7 @@ public class StringCalulatorTests {
 	@Test
 	public void testNNumbersWithBreakLineInTheString() {
 		StringCalculator stringCalculator = new StringCalculator();
-		int res = stringCalculator.add("1,\n2,1,2,\n1,2");
+		int res = stringCalculator.add("1,2\n1,2\n1,2");
 		assertEquals(9, res);
 		res = stringCalculator.add("2,3,\n4,5,\n3");
 		assertEquals(17, res);
