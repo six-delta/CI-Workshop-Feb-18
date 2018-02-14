@@ -60,5 +60,12 @@ public class StringCalculatorTests {
 		res = stringCalculator.add("4,5\n6");
 		assertEquals(15, res);
 	}
+	
+	@Test
+	public void testWithDifferentSymbolsInTheString() {
+		StringCalculator stringCalculator = new StringCalculator();
+		int res = stringCalculator.add("'9t,35-200#16(40/1000");
+		assertEquals(1300, res);
+	}
 
 }

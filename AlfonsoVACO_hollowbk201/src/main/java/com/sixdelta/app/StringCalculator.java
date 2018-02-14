@@ -7,9 +7,8 @@ public class StringCalculator {
 		if (numbers.isEmpty())
 			return 0;
 		if (!isSingleNumber(numbers)) {
-			String[] numbersToSum = numbers.split(",");
-			if (numbers.indexOf("\n") != -1)
-				return sumNumbersInStringArray(numbers.replace("\n", ",").split(","));
+			numbers = numbers.replaceAll("[^0-9]+", " ");
+			String[] numbersToSum = numbers.trim().split(" ");
 			return sumNumbersInStringArray(numbersToSum);
 		}
 		return Integer.parseInt(numbers);
