@@ -4,14 +4,14 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class StringCalculatorTests {
-	
+
 	@Test
 	public void testEmptyString() {
 		StringCalculator stringCalculator = new StringCalculator();
 		int res = stringCalculator.add("");
 		assertEquals(0, res);
 	}
-	
+
 	@Test
 	public void testOneNumberInTheString() {
 		StringCalculator stringCalculator = new StringCalculator();
@@ -24,7 +24,7 @@ public class StringCalculatorTests {
 		res = stringCalculator.add("5");
 		assertEquals(5, res);
 	}
-	
+
 	@Test
 	public void testTwoNumbersInTheString() {
 		StringCalculator stringCalculator = new StringCalculator();
