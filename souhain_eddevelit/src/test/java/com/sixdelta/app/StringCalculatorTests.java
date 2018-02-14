@@ -37,5 +37,18 @@ public class StringCalculatorTests {
 		res = stringCalculator.add("5,6");
 		assertEquals(11, res);
 	}
+	
+	@Test
+	public void testMoreNumbersInTheString() {
+		StringCalculator stringCalculator = new StringCalculator();
+		int res = stringCalculator.add("1,2,3");
+		assertEquals(6, res);
+		res = stringCalculator.add("2,3,4");
+		assertEquals(9, res);
+		res = stringCalculator.add("4,5,6");
+		assertEquals(15, res);
+		res = stringCalculator.add("5,6,7,8,9");
+		assertEquals(35, res);
+	}
 
 }

@@ -3,6 +3,8 @@ package com.sixdelta.app;
 public class StringCalculator {
 
 	public int add(String numbers) {
+		
+	
 
 		if (numbers.isEmpty()) {
 			return 0;
@@ -16,14 +18,14 @@ public class StringCalculator {
 			if (retval) {
 				String numero = numbers;
 				String[] partes = numero.split(",");
-				System.out.println(partes[1]);
-				String part1 = partes[0];
-				String part2 = partes[1];
-				int a = Integer.parseInt(part1);
-				int b = Integer.parseInt(part2);
-				return (a + b);
+				int numeroArray = 0;
+				for (int i = 0; i< partes.length; i++){
+			    numeroArray += Integer.parseInt(partes[i]) ;
+			 
+			        }
+				return numeroArray;
 			}
-			return Integer.parseInt(numbers);
+			
 		}
 		return Integer.parseInt(numbers);
 
