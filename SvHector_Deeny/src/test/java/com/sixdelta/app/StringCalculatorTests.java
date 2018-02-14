@@ -53,4 +53,16 @@ public class StringCalculatorTests {
 		res = stringCalculator.add("3,4,10,12,10,100");
 		assertEquals(139, res);
 	}
+	
+	@Test
+	public void testNNumbersWithBreakLineInTheString() {
+		StringCalculator stringCalculator = new StringCalculator();
+		int res = stringCalculator.add("1,2\n1,2\n1,2");
+		assertEquals(9, res);
+		res = stringCalculator.add("2,3,\n4,5,\n3");
+		assertEquals(17, res);
+		res = stringCalculator.add("3,\n4,\n10,12,10,\n100");
+		assertEquals(139, res);
+	}
+	
 }
