@@ -10,7 +10,6 @@ public class StringCalculatorTests {
 	
 
 	@Test
-	@Ignore
 	public void testEmptyString() {
 		StringCalculator stringCalculator = new StringCalculator();
 		int res = stringCalculator.add("");
@@ -18,7 +17,6 @@ public class StringCalculatorTests {
 	}
 
 	@Test
-	@Ignore
 	public void testOneNumberInTheString() {
 		StringCalculator stringCalculator = new StringCalculator();
 		int res = stringCalculator.add("1");
@@ -32,7 +30,6 @@ public class StringCalculatorTests {
 	}
 
 	@Test
-	@Ignore
 	public void testTwoNumbersInTheString() {
 		StringCalculator stringCalculator = new StringCalculator();
 		int res = stringCalculator.add("1,2");
@@ -46,7 +43,6 @@ public class StringCalculatorTests {
 	}
 	
 	@Test
-	@Ignore
 	public void testMoreNumbersInTheString() {
 		StringCalculator stringCalculator = new StringCalculator();
 		int res = stringCalculator.add("1,2,3");
@@ -69,6 +65,5 @@ public class StringCalculatorTests {
 		res = stringCalculator.add("4,5\n6");
 		assertEquals(15, res);
 	}
-
 
 }
