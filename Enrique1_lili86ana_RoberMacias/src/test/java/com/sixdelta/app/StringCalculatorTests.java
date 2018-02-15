@@ -54,8 +54,7 @@ public class StringCalculatorTests {
 	}
 	
 	@Test
-	@Ignore
-	public void testMoreNumbersWishInTheString() {
+	public void testMoreNumbersWishJumpLineInTheString() {
 		StringCalculator stringCalculator = new StringCalculator();
 		int res = stringCalculator.add("1\n2\n3");
 		assertEquals(6, res);
