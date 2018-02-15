@@ -37,5 +37,25 @@ public class StringCalculatorTests {
 		res = stringCalculator.add("5,6");
 		assertEquals(11, res);
 	}
+	
+	@Test
+	public void testSomeNumbersInTheString() {
+		StringCalculator stringCalculator = new StringCalculator();
+		int res = stringCalculator.add("1,2,3");
+		assertEquals(6, res);
+		res = stringCalculator.add("2,2,8,8");
+		assertEquals(20, res);
+	}
+	
+	@Test
+	public void testIntroKeyNumbersInTheString() {
+		StringCalculator stringCalculator = new StringCalculator();
+		int res = stringCalculator.add("1\n2,3");
+		assertEquals(6, res);
+		res = stringCalculator.add("2\n2,8\n8");
+		assertEquals(20, res);
+	}
+	
+	
 
 }
