@@ -3,8 +3,11 @@ package com.sixdelta.app;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
+<<<<<<< HEAD
+=======
 import org.junit.Ignore;
 
+>>>>>>> 6d3f290a993b82adda9806c9c76b9da42025fb13
 public class StringCalculatorTests {
 	
 	@Test
@@ -39,6 +42,8 @@ public class StringCalculatorTests {
 		res = stringCalculator.add("5,6");
 		assertEquals(11, res);
 	}
+<<<<<<< HEAD
+=======
 	
 	@Test
 	public void testMoreNumbersInTheString() {
@@ -66,5 +71,6 @@ public class StringCalculatorTests {
 		assertEquals(35, res);
 	}
 
+>>>>>>> 6d3f290a993b82adda9806c9c76b9da42025fb13
 
 }
