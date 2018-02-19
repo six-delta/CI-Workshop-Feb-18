@@ -10,7 +10,6 @@ public class StringCalculator {
 		if (theStringContainsMoreThanOneNumber(numbers, ",") || theStringContainsMoreThanOneNumber(numbers, "\n"))
 			return theSumOfTheNumbersInTheString(numbers);
 		return converASingleStringIntoANumber(numbers);
-
 	}
 
 	// \n
