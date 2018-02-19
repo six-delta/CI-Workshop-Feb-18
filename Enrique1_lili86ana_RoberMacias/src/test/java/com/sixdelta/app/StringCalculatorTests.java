@@ -31,7 +31,7 @@ public class StringCalculatorTests {
 	public void testTwoNumbersInTheString() {
 		StringCalculator stringCalculator = new StringCalculator();
 		int res = stringCalculator.add("1,2");
-		assertEquals(3, res);
+		assertEquals(4, res);
 		res = stringCalculator.add("2,3");
 		assertEquals(5, res);
 		res = stringCalculator.add("3,4");
