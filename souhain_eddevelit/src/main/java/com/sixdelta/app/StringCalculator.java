@@ -7,12 +7,12 @@ public class StringCalculator {
 		if (numbers.isEmpty()) {
 			return 0;
 		}
-			String replace = numbers.replace("\n", ",");
-				String[] parts = replace.split(",");
-				int addArray = 0;
-				for (int i = 0; i < parts.length; i++) {
-					addArray += Integer.parseInt(parts[i]);
-				}
-				return addArray;
+		String replace = numbers.replace("\n", ",");
+		String[] parts = replace.split(",");
+		int addArray = 0;
+		for (int i = 0; i < parts.length; i++) {
+			addArray += Integer.parseInt(parts[i]);
+		}
+		return addArray;
 	}
 }
