@@ -8,5 +8,6 @@ public class SvHectorApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(SvHectorApplication.class, args);
+			
 	}
 }
