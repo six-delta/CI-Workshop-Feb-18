@@ -1,9 +1,9 @@
-package repositories;
+package com.sixdelta.svHector.repositories;
 
 import org.springframework.data.repository.CrudRepository;
 
-import model.Task;
+import com.sixdelta.svHector.model.Task;
 
-public interface TaskRespostory extends CrudRepository<Task, Integer> {
+public interface TaskRespository extends CrudRepository<Task, Integer> {
 
 }

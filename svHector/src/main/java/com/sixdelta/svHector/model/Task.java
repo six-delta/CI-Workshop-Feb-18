@@ -1,4 +1,4 @@
-package model;
+package com.sixdelta.svHector.model;
 
 import java.util.Date;
 
@@ -6,11 +6,10 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Table;
+
 
 	@Entity
-	@Table(name = "db_svhector", catalog = "dbTest01")
-	public class Task {
+		public class Task {
 		
 		@Id
 		@GeneratedValue(strategy = GenerationType.IDENTITY)
