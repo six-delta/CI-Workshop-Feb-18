@@ -3,6 +3,8 @@ package com.sixdelta.app;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
+import org.junit.Ignore;
+
 public class StringCalculatorTests {
 	
 	@Test
@@ -64,8 +66,19 @@ public class StringCalculatorTests {
 	@Test
 	public void testWithDifferentSymbolsInTheString() {
 		StringCalculator stringCalculator = new StringCalculator();
-		int res = stringCalculator.add("'9t,35-200#16(40/1000");
+		int res = stringCalculator.add("'9t,35=200#16(40/1000");
 		assertEquals(1300, res);
+		res = stringCalculator.add("n#dQ20B!m=955O6o7055n7YCSNd=k#W7eLD6");
+		assertEquals(8056, res);
+	}
+	
+	@Test
+	public void testWithNegativeNumbers() {
+		StringCalculator stringCalculator = new StringCalculator();
+		int res = stringCalculator.add("'9t,35-200#16(40/1000");
+		assertEquals(0, res);
+		res = stringCalculator.add("n#dQ20B!m=-955O6o-7055n7YCSNd=k#W7eLD6");
+		assertEquals(0, res);
 	}
 
 }
