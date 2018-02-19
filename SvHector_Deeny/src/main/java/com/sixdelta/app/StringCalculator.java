@@ -17,5 +17,4 @@ public class StringCalculator {
 		}
 		return sumaString;
 	}
-
 }
