@@ -24,6 +24,7 @@ public int getTheSumOfEvenNumbersUntil(int n){
 	int accum = 0;
 	for(int i = 0; i < sequence.length; i++){
 		if(sequence[i] % 2 == 0)
+	System.out.println("Prueba desde aquii -");
 			accum += sequence[i];
 	}
 	return accum;
