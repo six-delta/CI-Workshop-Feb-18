@@ -1,17 +1,15 @@
-package model;
+package com.sixdelta.kozmoz.model;
 
 import java.util.Date;
 
 import javax.persistence.Entity;
+import javax.persistence.Table;
 import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
 import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
-/**
- * @author L430
- *
- */
 @Entity
+@Table(name="task")
 public class Task {
 
 	@Id
@@ -21,7 +19,6 @@ public class Task {
 	private Date dateCreated;
 	private Date lastUpdate;
 	private boolean actual;
-	
 	public Integer getiD() {
 		return iD;
 	}
@@ -52,6 +49,5 @@ public class Task {
 	public void setActual(boolean actual) {
 		this.actual = actual;
 	}
-	
 	
 }
