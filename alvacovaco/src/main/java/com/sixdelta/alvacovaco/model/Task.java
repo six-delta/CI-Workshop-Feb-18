@@ -12,7 +12,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "task", catalog = "ci_alfonsovaco")
+@Table(name = "task", catalog = "springboot_alfonsovaco")
 public class Task implements Serializable{
 	
 	private static final long serialVersionUID = 1L;
