@@ -1,4 +1,4 @@
-package model;
+package com.sixdelta.lili86ana.model;
 
 import java.util.Date;
 
