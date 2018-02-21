@@ -5,5 +5,5 @@ import com.sixdelta.kozmoz.model.Task;
 
 public interface TaskRepository extends CrudRepository<Task, Integer>   {
  
-	public abstract int saveTask(int id);
+	
 }
