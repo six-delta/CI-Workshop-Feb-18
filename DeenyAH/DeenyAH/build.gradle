@@ -51,7 +51,7 @@ task deploy {
 		ssh.run {
 			session(remotes.webServer) {
 		put from: 'build/libs/DeenyAH­0.0.1­SNAPSHOT.jar', into: '/home/ec2­user/'
-			//	execute 'sh deploy_DeenyAH.sh'
+			execute 'sh deploy_DeenyAH.sh'
 			}
 		}
 	}
