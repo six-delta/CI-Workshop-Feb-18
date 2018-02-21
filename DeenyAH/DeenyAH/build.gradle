@@ -1,21 +1,23 @@
 buildscript {
 	ext {
-		springBootVersion = '2.0.0.BUILD-SNAPSHOT'
+		springBootVersion = '1.5.10.RELEASE'
 	}
 	repositories {
 		mavenCentral()
-		maven{ url "https://repo.spring.io/snapshot" }
-		maven{ url "https://repo.spring.io/milestone" }
+		maven {
+	      		url "https://plugins.gradle.org/m2/"
+		}
 	}
 	dependencies {
 		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+		classpath "org.hidetake:gradle-ssh-plugin:2.9.0"
 	}
 }
 
 apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'org.springframework.boot'
-apply plugin: "io.spring.dependency-management"
+apply plugin: "org.hidetake.ssh"
 
 group = 'com.sixdelta'
 version = '0.0.1-SNAPSHOT'
@@ -23,8 +25,6 @@ sourceCompatibility = 1.8
 
 repositories {
 	mavenCentral()
-	maven{ url "https://repo.spring.io/snapshot" }
-	maven{ url "https://repo.spring.io/milestone" }
 }
 
 
@@ -34,3 +34,33 @@ dependencies {
 	runtime('mysql:mysql-connector-java')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 }
+
+
+remotes {
+    webServer {
+    host = 'ec2-34-229-168-15.compute-1.amazonaws.com'
+    user = 'ec2-user'
+    agent = true
+    identity = file("${System.getProperty('user.home')}/.ssh/id_rsa")
+    knownHosts = allowAnyHosts
+  }
+}
+
+task deploy {
+	doLast {
+		ssh.run {
+			session(remotes.webServer) {
+				put from: 'build/libs/DeenyAH­0.0.1­SNAPSHOT.jar', into: '/home/ec2­user/'
+				execute 'sh deploy_DeenyAH.sh'
+			}
+		}
+	}
+}
+deploy.dependsOn('build')
+
+/*
+ (.__. )
+  <   /
+   /  \
+   
+   */
