@@ -49,8 +49,8 @@ task deploy {
     doLast {
         ssh.run {
              session(remotes.webServer) {
-             	execute 'kill $(cat ./pid_eddevelit.file)'
-      			execute "rm /home/ec2-user/eddevelit-0.0.1-SNAPSHOT.jar"
+             	execute 'kill $(cat ./pid_souhain.file)'
+      			execute "rm /home/ec2-user/souhain-0.0.1-SNAPSHOT.jar"
                    put from: 'build/libs/souhain-0.0.1-SNAPSHOT.jar', into: '/home/ec2-user/'
                    execute 'sh deploy_souhain.sh'
              }
