@@ -54,6 +54,7 @@ remotes {
  			
  				put from: 'build/libs/svHector-0.0.1-SNAPSHOT.jar', into:'/home/ec2­user/'
  				execute 'sh deploy_svHector.sh'
+ 				
 			}
 		}
 	}
