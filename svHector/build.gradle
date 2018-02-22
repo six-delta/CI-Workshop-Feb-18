@@ -52,15 +52,11 @@ remotes {
  		ssh.run {
  			session(remotes.webServer) {
  			
+ 			execute 'kill $(cat ./pid_svHector.file)'
+ 			execute "rm /home/ec2-user/svHector-0.0.1-SNAPSHOT.jar"
  				put from: 'build/libs/svHector-0.0.1-SNAPSHOT.jar', into:'/home/ec2-user/'
- 				//execute 'uname -a'
- 				execute 'sh deploy_svHector.sh'
- 				
- 				/*execute 'kill $(cat ./pid_DeenyAH.file)'
-     			execute "rm /home/ec2-user/DeenyAH-0.0.1-SNAPSHOT.jar"
-    			put from: 'build/libs/DeenyAH-0.0.1-SNAPSHOT.jar', into: '/home/ec2-user/'
-     		  	execute 'nohup ./deploy_DeenyAH.sh > foo.out 2> foo.err < /dev/null &'
-      		 	execute 'echo "Deploy terminado"'*/
+ 				execute 'nohup ./deploy_svHector.sh > foo.out 2> foo.err < /dev/null &'
+ 				execute 'echo "Deploy terminado"'
  				
 			}
 		}
