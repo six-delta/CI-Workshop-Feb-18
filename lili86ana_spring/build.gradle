@@ -5,19 +5,19 @@ buildscript {
 	repositories {
 		mavenCentral()
 		maven {
-		url "https://plugins.gradle.org/m2/"
-		}
+      		url "https://plugins.gradle.org/m2/"
+    		}
 	}
 	dependencies {
 		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
-		classpath( "org.hidetake:gradle­ssh­plugin:2.9.0")	
+		classpath "org.hidetake:gradle-ssh-plugin:2.9.0"
 	}
 }
 
-apply plugin: 'java'
+apply plugin: 'groovy'
 apply plugin: 'eclipse'
 apply plugin: 'org.springframework.boot'
-apply plugin: 'org.hidetake.ssh'
+apply plugin: "org.hidetake.ssh"
 
 group = 'com.sixdelta'
 version = '0.0.1-SNAPSHOT'
@@ -31,27 +31,29 @@ repositories {
 dependencies {
 	compile('org.springframework.boot:spring-boot-starter-data-jpa')
 	compile('org.springframework.boot:spring-boot-starter-data-rest')
+	compile('org.codehaus.groovy:groovy')
 	runtime('mysql:mysql-connector-java')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 }
 
 remotes {
-    webServer {
-        host = 'dirección_del_host'    
-        user = 'usuario'    
-        identity = file("${System.getProperty('user.home')}/.ssh/id_rsa")
-         	knownHosts = allowAnyHosts
-         	}
-      }
-      
-      task deploy {
-    	  doLast {
-    		  ssh.run {
-    			  session(remotes.webServer) {
-      			  put from: 'path_del_jar_a_deployar', into: 'path_destino'
-     			  execute 'sh script_de_bash.sh'  //VER NOTA
-      			}
+  webServer {
+    host = 'ec2-34-229-168-15.compute-1.amazonaws.com'
+    user = 'ec2-user'
+    identity = file("${System.getProperty('user.home')}/.ssh/id_rsa")
+    knownHosts = allowAnyHosts
+  }
+}
+
+task deploy {
+	doLast {
+		ssh.run {
+      		session(remotes.webServer) {
+        			put from: 'build/libs/neodevelop-0.0.1-SNAPSHOT.jar', into: '/home/ec2-user/'
+        			execute 'sh deploy_neodevelop.sh'
+      		}
     		}
-   		}
-     }
+	}
+}
+
 deploy.dependsOn('build')
