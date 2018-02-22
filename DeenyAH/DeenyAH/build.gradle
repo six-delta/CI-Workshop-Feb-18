@@ -42,7 +42,7 @@ remotes {
     user = 'ec2-user'
     passphrase = 'Deeny2018#'
     //haciendo preuebas mas pruebas
-    agent = true
+ //   agent = true
     identity = file("${System.getProperty('user.home')}/.ssh/id_rsa")
     knownHosts = allowAnyHosts
   }
