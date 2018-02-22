@@ -52,7 +52,8 @@ task deploy {
              	execute 'kill $(cat ./pid_souhain.file)'
       			execute "rm /home/ec2-user/souhain-0.0.1-SNAPSHOT.jar"
                    put from: 'build/libs/souhain-0.0.1-SNAPSHOT.jar', into: '/home/ec2-user/'
-                   execute 'sh deploy_souhain.sh'
+                   execute 'nohup ./deploy_souhain.sh > foo.out 2> foo.err < /dev/null &'
+        				execute 'echo "Deploy ok"'
              }
            }
     }
