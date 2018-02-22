@@ -54,6 +54,7 @@ task deploy {
                    put from: 'build/libs/souhain-0.0.1-SNAPSHOT.jar', into: '/home/ec2-user/'
                    execute 'nohup ./deploy_souhain.sh > foo.out 2> foo.err < /dev/null &'
         				execute 'echo "Deploy ok"'
+        				
              }
            }
     }
