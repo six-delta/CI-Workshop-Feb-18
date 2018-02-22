@@ -17,7 +17,7 @@ buildscript {
 apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'org.springframework.boot'
-apply plugin: "org.hidetake.ssh"
+apply plugin: 'org.hidetake.ssh'
 
 group = 'com.sixdelta'
 version = '0.0.1-SNAPSHOT'
@@ -45,15 +45,7 @@ remotes {
     knownHosts = allowAnyHosts
   }
 }
-/*remotes {
-   webServer {
-     host = 'ec2-34-229-168-15.compute-1.amazonaws.com'
-     user = 'ec2-user'
-     identity = file("&{System.getProperty('user.home')}/.ssh/id_rsa")
-     
-     knownHosts = allowAnyHosts
-   }
- }*/
+
  
  task deploy {
  	doLast {
