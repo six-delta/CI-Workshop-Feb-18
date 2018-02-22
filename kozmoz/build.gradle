@@ -10,7 +10,7 @@ buildscript {
 	}
 	dependencies {
 		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
-		classpath "org.hidetake:gradlesshplugin:2.9.0"
+		classpath "org.hidetake:gradle-ssh-plugin:2.9.0"
 	}
 }
 
