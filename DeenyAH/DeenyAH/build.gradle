@@ -53,6 +53,8 @@ task deploy {
 		ssh.run {
       		session(remotes.webServer) {
       		
+      		
+      		
       	/*	execute 'kill $(cat ./pid_DeenyAH.file)'
       				execute "rm /home/ec2-user/DeenyAH-0.0.1-SNAPSHOT.jar"
       put from: 'build/libs/DeenyAH-0.0.1-SNAPSHOT.jar', into: '/home/ec2-user/'
