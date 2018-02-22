@@ -4,8 +4,8 @@ buildscript {
 	}
 	repositories {
 		mavenCentral()
-	//	maven{ url "https://repo.spring.io/snapshot" }
-	//	maven{ url "https://repo.spring.io/milestone" }
+		//maven{ url "https://repo.spring.io/snapshot" }
+		//maven{ url "https://repo.spring.io/milestone" }
 		maven{ url "https://plugins.gradle.org/m2/"	}
 	}
 	dependencies {
@@ -17,7 +17,7 @@ buildscript {
 apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'org.springframework.boot'
-apply plugin: 'org.hidetake.ssh'
+apply plugin: "org.hidetake.ssh"
 
 group = 'com.sixdelta'
 version = '0.0.1-SNAPSHOT'
@@ -51,11 +51,13 @@ remotes {
  	doLast {
  		ssh.run {
  			session(remotes.webServer) {
- 			
+ 			 	
+ 			 	execute 'kill $(cat ./pid_svHector.file)'
  				put from: 'build/libs/svHector-0.0.1-SNAPSHOT.jar', into:'/home/ec2-user/'
- 				//execute 'uname -a'
- 				execute 'sh deploy_svHector.sh'
- 				
+ 				execute 'nohup ./deploy_svHector.sh > foo.out 2> foo.err < /dev/null &'
+      		 	execute 'echo "Deploy terminado"'
+ 				//execute 'sh deploy_svHector.sh'
+				
 			}
 		}
 	}
