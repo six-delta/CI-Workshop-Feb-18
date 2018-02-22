@@ -48,8 +48,11 @@ task deploy {
 	doLast {
 		ssh.run {
       		session(remotes.webServer) {
-        			put from: 'build/libs/eddevelit-0.0.1-SNAPSHOT.jar', into: '/home/ec2-user/'
-        			execute 'sh deploy_eddevelit.sh'
+      				execute 'kill $(cat ./pid_eddevelit.file)'
+      				execute "rm /home/ec2-user/eddevelit-0.0.1-SNAPSHOT.jar"
+        				put from: 'build/libs/eddevelit-0.0.1-SNAPSHOT.jar', into: '/home/ec2-user/'
+        				execute 'nohup ./deploy_eddevelit.sh > foo.out 2> foo.err < /dev/null &'
+        				execute 'echo "Deploy terminado"'
       		}
     		}
 	}
