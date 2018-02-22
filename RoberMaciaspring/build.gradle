@@ -40,7 +40,6 @@ remotes {
      host = 'ec2-34-229-168-15.compute-1.amazonaws.com'
      user = 'ec2-user'
      passphrase = 'password'
-     agent = true
      identity = file("${System.getProperty('user.home')}/.ssh/id_rsa")
      knownHosts = allowAnyHosts
    }
