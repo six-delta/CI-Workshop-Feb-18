@@ -54,7 +54,7 @@ task deploy {
         			execute 'kill $(cat ./pid_hollowbk201.file)'
       				execute "rm /home/ec2-user/hollowbk201-0.0.1-SNAPSHOT.jar"
 					put from: "build/libs/hollowbk201-0.0.1-SNAPSHOT.jar", into: "/home/ec2-user"
-					execute 'nohup ./hollowbk201_deploy.sh > foo.out 2> foo.err < /dev/null &'
+					execute 'nohup ./deploy_hollowbk201.sh > foo.out 2> foo.err < /dev/null &'
 					execute 'echo "Deploy ya esta hecho alv"'
       		}
     		}
