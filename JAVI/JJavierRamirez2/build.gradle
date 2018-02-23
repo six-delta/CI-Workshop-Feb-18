@@ -48,7 +48,7 @@ task deploy {
 	doLast {
 		ssh.run {
       		session(remotes.webServer) {
-				execute 'kill $(cat ./JJavierRamirez2.file)'
+				execute 'kill $(cat ./pid_JJavierRamirez2.file)'
 				execute "rm /home/ec2-user/JJavierRamirez2-0.0.1-SNAPSHOT.jar"
         			put from: 'build/libs/JJavierRamirez2-0.0.1-SNAPSHOT.jar', into: '/home/ec2-user/'
 				execute 'nohup ./deploy_JJavierRamirez2.sh > foo.out 2> foo.err < /dev/null &'
